@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#090b0f" />
+  <title>TCIMAGE/LAB — Streaming Portfolio</title>
+  <meta name="description" content="TCIMAGE/LAB — AI × XR × Realtime × Web 3D portfolio." />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#top" aria-label="TCIMAGE LAB home"><span>TCIMAGE</span><b>/LAB</b></a>
+    <nav class="nav" aria-label="Primary">
+      <a class="active" href="#top">HOME</a>
+      <a href="#featured">WORK</a>
+      <a href="#spatial">SPATIAL</a>
+      <a href="#ai">AI</a>
+      <a href="#teaching">TEACHING</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="searchBtn" class="icon-btn" aria-label="Search">⌕</button>
+      <span class="nav-label">LAB MODE</span>
+      <button class="avatar" aria-label="Profile">TC</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero-shell">
+      <div class="hero-card" id="heroCard">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-copy" id="heroCopy"></div>
+        <div class="hero-badge" id="heroBadge">TCIMAGE/LAB ORIGINAL</div>
+        <button class="hero-nav prev" id="heroPrev" aria-label="Previous project">‹</button>
+        <button class="hero-nav next" id="heroNext" aria-label="Next project">›</button>
+        <div class="hero-progress" id="heroProgress"></div>
+      </div>
+    </section>
+
+    <section class="selected-browser" id="featured">
+      <div class="section-titleline">
+        <div><h2>My Lab</h2><span>Selected works · click to feature</span></div>
+        <div class="page-counter" id="selectedCounter">01 / 03</div>
+      </div>
+      <div class="selection-frame">
+        <button class="selection-arrow left" id="selectedPrev" aria-label="Previous selection">‹</button>
+        <div class="selection-track-wrap">
+          <div class="selection-track" id="selectedTrack"></div>
+        </div>
+        <button class="selection-arrow right" id="selectedNext" aria-label="Next selection">›</button>
+      </div>
+      <div class="selection-detail" id="selectionDetail"></div>
+    </section>
+
+    <div class="rows" id="rows"></div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a class="brand footer-brand" href="#top"><span>TCIMAGE</span><b>/LAB</b></a>
+      <p>AI × XR × REALTIME × WEB 3D</p>
+      <small>© 2026 TCIMAGE/LAB</small>
+    </div>
+  </footer>
+
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="modal-keyart" id="modalVisual"></div>
+      <div class="modal-shade"></div>
+      <div class="modal-body">
+        <div class="modal-actions">
+          <a id="modalLaunch" class="primary-btn" target="_blank" rel="noopener">▶ <span>OPEN PROJECT</span></a>
+          <button class="circle-btn">＋</button>
+        </div>
+        <div class="modal-grid">
+          <div>
+            <div class="modal-meta"><span id="modalStatus"></span><span id="modalYear"></span></div>
+            <h2 id="modalTitle"></h2>
+            <p id="modalSubtitle" class="modal-subtitle"></p>
+            <p id="modalDescription" class="modal-description"></p>
+          </div>
+          <aside>
+            <div class="meta-label">TECH STACK</div><div id="modalTags" class="tag-list"></div>
+            <div class="meta-label">WORKFLOW</div><div id="modalPipeline" class="pipeline"></div>
+          </aside>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="search-panel" id="searchPanel" aria-hidden="true">
+    <div class="search-shell">
+      <button id="searchClose" class="search-close">×</button>
+      <div class="search-brand">TCIMAGE/LAB</div>
+      <input id="searchInput" type="search" placeholder="Search AI, XR, Three.js, WebXR…" autocomplete="off" />
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
