@@ -20,3 +20,7 @@ Static site. Upload the folder to Vercel/Netlify, or push to GitHub and deploy w
 
 ## V4.1 Hover Preview
 Desktop cards now wait ~0.85s on hover, then show a preview. If `assets/previews/<project-id>.mp4` exists it is used; otherwise the live project site is loaded lazily in a non-interactive preview frame. Mobile skips hover preview.
+
+
+## V4.3 update
+Added **AI TWO YEARS — 2024→2026｜AI 兩年到底改變了什麼？** to Course Portals and Teaching / Research, with a dedicated key-art thumbnail.
